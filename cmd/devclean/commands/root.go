@@ -12,6 +12,9 @@ are flagged for review and safe removal.`,
 	}
 
 	root.AddCommand(newScanCmd())
+	root.AddCommand(newCleanCmd())
+	root.AddCommand(newUninstallCmd())
+	root.AddCommand(newUndoCmd())
 
 	return root
 }
