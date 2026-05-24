@@ -1,0 +1,1381 @@
+# Known app → trace path dictionary.
+# Each entry maps a well-known app to its traces so the correlator
+# can classify them even when the bundle ID isn't embedded in the path.
+
+zoom:
+  bundle_id: us.zoom.xos
+  brew_cask: zoom
+  traces:
+    - ~/Library/Application Support/zoom.us
+    - ~/Library/Caches/us.zoom.xos
+    - ~/Library/Logs/zoom.us
+    - ~/Library/Preferences/us.zoom.xos.plist
+    - ~/.zoom
+    - ~/Library/LaunchAgents/us.zoom.ZoomDaemon.plist
+
+slack:
+  bundle_id: com.tinyspeck.slackmacgap
+  brew_cask: slack
+  traces:
+    - ~/Library/Application Support/Slack
+    - ~/Library/Caches/com.tinyspeck.slackmacgap
+    - ~/Library/Preferences/com.tinyspeck.slackmacgap.plist
+    - ~/Library/Logs/Slack
+
+docker:
+  bundle_id: com.docker.docker
+  brew_cask: docker
+  traces:
+    - ~/Library/Application Support/Docker Desktop
+    - ~/Library/Containers/com.docker.docker
+    - ~/Library/Group Containers/group.com.docker
+    - ~/.docker
+    - ~/Library/LaunchAgents/com.docker.helper.plist
+
+mongodb-community:
+  bundle_id: ""
+  brew_formula: mongodb-community
+  traces:
+    - ~/Library/Logs/MongoDB
+    - /usr/local/var/log/mongodb
+    - /usr/local/var/mongodb
+    - ~/.mongorc.js
+
+microsoft-teams:
+  bundle_id: com.microsoft.teams
+  brew_cask: microsoft-teams
+  traces:
+    - ~/Library/Application Support/Microsoft Teams
+    - ~/Library/Caches/com.microsoft.teams
+    - ~/Library/Preferences/com.microsoft.teams.plist
+    - ~/Library/Logs/Microsoft Teams
+
+visual-studio-code:
+  bundle_id: com.microsoft.VSCode
+  brew_cask: visual-studio-code
+  traces:
+    - ~/Library/Application Support/Code
+    - ~/Library/Caches/com.microsoft.VSCode
+    - ~/Library/Preferences/com.microsoft.VSCode.plist
+    - ~/.vscode
+
+cursor:
+  bundle_id: com.todesktop.230313mzl4w4u92
+  brew_cask: cursor
+  traces:
+    - ~/Library/Application Support/Cursor
+    - ~/Library/Caches/com.todesktop.230313mzl4w4u92
+    - ~/.cursor
+
+notion:
+  bundle_id: notion.id
+  brew_cask: notion
+  traces:
+    - ~/Library/Application Support/Notion
+    - ~/Library/Caches/notion.id
+    - ~/Library/Preferences/notion.id.plist
+
+spotify:
+  bundle_id: com.spotify.client
+  brew_cask: spotify
+  traces:
+    - ~/Library/Application Support/Spotify
+    - ~/Library/Caches/com.spotify.client
+    - ~/Library/Preferences/com.spotify.client.plist
+
+discord:
+  bundle_id: com.hnc.Discord
+  brew_cask: discord
+  traces:
+    - ~/Library/Application Support/discord
+    - ~/Library/Caches/com.hnc.Discord
+    - ~/Library/Preferences/com.hnc.Discord.plist
+
+figma:
+  bundle_id: com.figma.Desktop
+  brew_cask: figma
+  traces:
+    - ~/Library/Application Support/Figma
+    - ~/Library/Caches/com.figma.Desktop
+    - ~/Library/Preferences/com.figma.Desktop.plist
+
+postman:
+  bundle_id: com.postmanlabs.mac
+  brew_cask: postman
+  traces:
+    - ~/Library/Application Support/Postman
+    - ~/Library/Caches/com.postmanlabs.mac
+    - ~/.postman
+
+tableplus:
+  bundle_id: com.tinyapp.TablePlus
+  brew_cask: tableplus
+  traces:
+    - ~/Library/Application Support/TablePlus
+    - ~/Library/Caches/com.tinyapp.TablePlus
+    - ~/Library/Preferences/com.tinyapp.TablePlus.plist
+
+1password:
+  bundle_id: com.1password.1password
+  brew_cask: 1password
+  traces:
+    - ~/Library/Application Support/1Password
+    - ~/Library/Caches/com.1password.1password
+    - ~/Library/Group Containers/2BUA8C4S2C.com.1password
+
+alfred:
+  bundle_id: com.runningwithcrayons.Alfred
+  brew_cask: alfred
+  traces:
+    - ~/Library/Application Support/Alfred
+    - ~/Library/Caches/com.runningwithcrayons.Alfred
+    - ~/Library/Preferences/com.runningwithcrayons.Alfred.plist
+
+iterm2:
+  bundle_id: com.googlecode.iterm2
+  brew_cask: iterm2
+  traces:
+    - ~/Library/Application Support/iTerm2
+    - ~/Library/Caches/com.googlecode.iterm2
+    - ~/Library/Preferences/com.googlecode.iterm2.plist
+
+warp:
+  bundle_id: dev.warp.Warp-Stable
+  brew_cask: warp
+  traces:
+    - ~/Library/Application Support/dev.warp.Warp-Stable
+    - ~/Library/Caches/dev.warp.Warp-Stable
+    - ~/.warp
+
+homebrew:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/Homebrew
+    - /usr/local/Homebrew
+    - /opt/homebrew/var/homebrew
+
+node:
+  bundle_id: ""
+  brew_formula: node
+  traces:
+    - ~/.npm
+    - ~/.node_repl_history
+
+python:
+  bundle_id: ""
+  brew_formula: python
+  traces:
+    - ~/Library/Caches/pip
+    - ~/.pip
+
+rust:
+  bundle_id: ""
+  traces:
+    - ~/.cargo
+    - ~/.rustup
+
+go:
+  bundle_id: ""
+  brew_formula: go
+  traces:
+    - ~/go/pkg
+    - ~/.cache/go-build
+
+aws-cli:
+  bundle_id: ""
+  brew_formula: awscli
+  traces:
+    - ~/.aws/cli
+    - ~/.aws/config
+
+google-cloud-sdk:
+  bundle_id: ""
+  brew_cask: google-cloud-sdk
+  traces:
+    - ~/.config/gcloud
+    - ~/Library/Application Support/google-cloud-tools-python
+
+heroku:
+  bundle_id: ""
+  brew_formula: heroku
+  traces:
+    - ~/.netrc
+    - ~/.config/heroku
+    - ~/Library/Caches/heroku
+
+virtualbox:
+  bundle_id: org.virtualbox.app.VirtualBox
+  brew_cask: virtualbox
+  traces:
+    - ~/Library/Application Support/VirtualBox
+    - ~/.config/VirtualBox
+
+vagrant:
+  bundle_id: ""
+  brew_cask: vagrant
+  traces:
+    - ~/.vagrant.d
+
+pycharm:
+  bundle_id: com.jetbrains.pycharm
+  brew_cask: pycharm
+  traces:
+    - ~/Library/Application Support/JetBrains/PyCharm*
+    - ~/Library/Caches/JetBrains/PyCharm*
+    - ~/Library/Logs/JetBrains/PyCharm*
+    - ~/Library/Preferences/jetbrains.pycharm*.plist
+
+intellij-idea:
+  bundle_id: com.jetbrains.intellij
+  brew_cask: intellij-idea
+  traces:
+    - ~/Library/Application Support/JetBrains/IntelliJIdea*
+    - ~/Library/Caches/JetBrains/IntelliJIdea*
+    - ~/Library/Logs/JetBrains/IntelliJIdea*
+
+webstorm:
+  bundle_id: com.jetbrains.WebStorm
+  brew_cask: webstorm
+  traces:
+    - ~/Library/Application Support/JetBrains/WebStorm*
+    - ~/Library/Caches/JetBrains/WebStorm*
+    - ~/Library/Logs/JetBrains/WebStorm*
+
+datagrip:
+  bundle_id: com.jetbrains.datagrip
+  brew_cask: datagrip
+  traces:
+    - ~/Library/Application Support/JetBrains/DataGrip*
+    - ~/Library/Caches/JetBrains/DataGrip*
+    - ~/Library/Logs/JetBrains/DataGrip*
+
+xcode:
+  bundle_id: com.apple.dt.Xcode
+  traces:
+    - ~/Library/Developer/Xcode/DerivedData
+    - ~/Library/Developer/Xcode/Archives
+    - ~/Library/Caches/com.apple.dt.Xcode
+    - ~/Library/Logs/CoreSimulator
+
+garageband:
+  bundle_id: com.apple.GarageBand
+  traces:
+    - ~/Library/Application Support/GarageBand
+    - ~/Music/GarageBand
+
+imovie:
+  bundle_id: com.apple.iMovieApp
+  traces:
+    - ~/Movies/iMovie*
+    - ~/Library/Application Support/iMovie
+
+microsoft-word:
+  bundle_id: com.microsoft.Word
+  traces:
+    - ~/Library/Application Support/Microsoft/Office
+    - ~/Library/Caches/com.microsoft.Word
+    - ~/Library/Preferences/com.microsoft.Word.plist
+
+microsoft-excel:
+  bundle_id: com.microsoft.Excel
+  traces:
+    - ~/Library/Caches/com.microsoft.Excel
+    - ~/Library/Preferences/com.microsoft.Excel.plist
+
+microsoft-powerpoint:
+  bundle_id: com.microsoft.Powerpoint
+  traces:
+    - ~/Library/Caches/com.microsoft.Powerpoint
+    - ~/Library/Preferences/com.microsoft.Powerpoint.plist
+
+skype:
+  bundle_id: com.skype.skype
+  brew_cask: skype
+  traces:
+    - ~/Library/Application Support/Skype
+    - ~/Library/Caches/com.skype.skype
+    - ~/Library/Preferences/com.skype.skype.plist
+
+whatsapp:
+  bundle_id: net.whatsapp.WhatsApp
+  traces:
+    - ~/Library/Application Support/WhatsApp
+    - ~/Library/Caches/net.whatsapp.WhatsApp
+
+telegram:
+  bundle_id: ru.keepcoder.Telegram
+  brew_cask: telegram
+  traces:
+    - ~/Library/Application Support/Telegram Desktop
+    - ~/Library/Group Containers/ru.keepcoder.Telegram
+
+dropbox:
+  bundle_id: com.getdropbox.dropbox
+  brew_cask: dropbox
+  traces:
+    - ~/Library/Application Support/Dropbox
+    - ~/Library/Caches/com.getdropbox.dropbox
+    - ~/.dropbox
+
+google-drive:
+  bundle_id: com.google.drivefs
+  brew_cask: google-drive
+  traces:
+    - ~/Library/Application Support/Google/DriveFS
+    - ~/Library/Caches/com.google.drivefs
+
+onedrive:
+  bundle_id: com.microsoft.OneDrive-mac
+  brew_cask: onedrive
+  traces:
+    - ~/Library/Application Support/OneDrive
+    - ~/Library/Logs/OneDrive
+
+tower:
+  bundle_id: com.fournova.Tower3
+  brew_cask: tower
+  traces:
+    - ~/Library/Application Support/Tower3
+    - ~/Library/Caches/com.fournova.Tower3
+
+sourcetree:
+  bundle_id: com.torusknot.SourceTreeNotMAS
+  brew_cask: sourcetree
+  traces:
+    - ~/Library/Application Support/SourceTree
+    - ~/Library/Caches/com.torusknot.SourceTreeNotMAS
+
+transmit:
+  bundle_id: com.panic.Transmit5
+  traces:
+    - ~/Library/Application Support/Transmit 5
+    - ~/Library/Caches/com.panic.Transmit5
+
+sequel-pro:
+  bundle_id: com.sequelpro.SequelPro
+  brew_cask: sequel-pro
+  traces:
+    - ~/Library/Application Support/Sequel Pro
+    - ~/Library/Caches/com.sequelpro.SequelPro
+
+proxyman:
+  bundle_id: com.proxyman.NSProxy
+  brew_cask: proxyman
+  traces:
+    - ~/Library/Application Support/Proxyman
+    - ~/Library/Caches/com.proxyman.NSProxy
+
+charles:
+  bundle_id: com.xk72.charles
+  brew_cask: charles
+  traces:
+    - ~/Library/Application Support/Charles
+    - ~/Library/Preferences/com.xk72.charles.plist
+
+wireshark:
+  bundle_id: org.wireshark.Wireshark
+  brew_cask: wireshark
+  traces:
+    - ~/.config/wireshark
+    - ~/Library/Application Support/Wireshark
+
+rectangle:
+  bundle_id: com.knollsoft.Rectangle
+  brew_cask: rectangle
+  traces:
+    - ~/Library/Application Support/Rectangle
+    - ~/Library/Preferences/com.knollsoft.Rectangle.plist
+
+bartender:
+  bundle_id: com.surteesstudios.Bartender
+  brew_cask: bartender
+  traces:
+    - ~/Library/Application Support/Bartender 4
+    - ~/Library/Preferences/com.surteesstudios.Bartender.plist
+
+cleanmymac:
+  bundle_id: com.macpaw.CleanMyMac4
+  brew_cask: cleanmymac
+  traces:
+    - ~/Library/Application Support/CleanMyMac X
+    - ~/Library/Caches/com.macpaw.CleanMyMac4
+
+hazel:
+  bundle_id: com.noodlesoft.Hazel
+  traces:
+    - ~/Library/Application Support/Hazel
+    - ~/Library/Preferences/com.noodlesoft.Hazel.plist
+
+mimestream:
+  bundle_id: com.mimestream.Mimestream
+  traces:
+    - ~/Library/Application Support/Mimestream
+    - ~/Library/Caches/com.mimestream.Mimestream
+
+spark:
+  bundle_id: com.readdle.smartemail-mac
+  traces:
+    - ~/Library/Application Support/Spark Desktop
+    - ~/Library/Caches/com.readdle.smartemail-mac
+
+airmail:
+  bundle_id: it.bloop.airmail2
+  traces:
+    - ~/Library/Application Support/Airmail 5
+    - ~/Library/Caches/it.bloop.airmail2
+
+bear:
+  bundle_id: net.shinyfrog.bear
+  traces:
+    - ~/Library/Application Support/Bear
+    - ~/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear
+
+obsidian:
+  bundle_id: md.obsidian
+  brew_cask: obsidian
+  traces:
+    - ~/Library/Application Support/obsidian
+    - ~/Library/Caches/md.obsidian
+
+typora:
+  bundle_id: abnerworks.Typora
+  brew_cask: typora
+  traces:
+    - ~/Library/Application Support/abnerworks.Typora
+    - ~/Library/Preferences/abnerworks.Typora.plist
+
+screenflow:
+  bundle_id: com.telestream.mac.ScreenFlow10
+  traces:
+    - ~/Library/Application Support/ScreenFlow
+    - ~/Library/Caches/com.telestream.mac.ScreenFlow10
+
+loom:
+  bundle_id: com.loom.desktop
+  brew_cask: loom
+  traces:
+    - ~/Library/Application Support/Loom
+    - ~/Library/Caches/com.loom.desktop
+
+cleanshot:
+  bundle_id: com.getcleanshot.app
+  traces:
+    - ~/Library/Application Support/CleanShot X
+    - ~/Library/Preferences/com.getcleanshot.app.plist
+
+gimp:
+  bundle_id: org.gimp.gimp
+  brew_cask: gimp
+  traces:
+    - ~/.config/GIMP
+    - ~/Library/Application Support/GIMP
+
+inkscape:
+  bundle_id: org.inkscape.Inkscape
+  brew_cask: inkscape
+  traces:
+    - ~/.config/inkscape
+
+blender:
+  bundle_id: org.blenderfoundation.blender
+  brew_cask: blender
+  traces:
+    - ~/Library/Application Support/Blender
+
+unity-hub:
+  bundle_id: com.unity3d.UnityHub
+  brew_cask: unity-hub
+  traces:
+    - ~/Library/Application Support/UnityHub
+    - ~/Library/Logs/Unity
+
+steam:
+  bundle_id: com.valvesoftware.steam
+  brew_cask: steam
+  traces:
+    - ~/Library/Application Support/Steam
+
+vlc:
+  bundle_id: org.videolan.vlc
+  brew_cask: vlc
+  traces:
+    - ~/Library/Application Support/org.videolan.vlc
+    - ~/Library/Preferences/org.videolan.vlc.plist
+
+handbrake:
+  bundle_id: fr.handbrake.HandBrake
+  brew_cask: handbrake
+  traces:
+    - ~/Library/Application Support/HandBrake
+    - ~/Library/Preferences/fr.handbrake.HandBrake.plist
+
+mpv:
+  bundle_id: io.mpv
+  brew_cask: mpv
+  traces:
+    - ~/.config/mpv
+
+istat-menus:
+  bundle_id: com.bjango.istatmenus6
+  brew_cask: istat-menus
+  traces:
+    - ~/Library/Application Support/iStat Menus 6
+    - ~/Library/Preferences/com.bjango.istatmenus6.plist
+
+little-snitch:
+  bundle_id: at.obdev.LittleSnitch
+  brew_cask: little-snitch
+  traces:
+    - ~/Library/Application Support/Little Snitch
+    - /Library/Little Snitch
+
+nordvpn:
+  bundle_id: com.nordvpn.macos
+  brew_cask: nordvpn
+  traces:
+    - ~/Library/Application Support/NordVPN
+    - ~/Library/Preferences/com.nordvpn.macos.plist
+
+expressvpn:
+  bundle_id: com.expressvpn.expressvpnmac
+  brew_cask: expressvpn
+  traces:
+    - ~/Library/Application Support/ExpressVPN
+    - ~/Library/Preferences/com.expressvpn.expressvpnmac.plist
+
+keepassxc:
+  bundle_id: org.keepassxc.keepassxc
+  brew_cask: keepassxc
+  traces:
+    - ~/Library/Application Support/keepassxc
+    - ~/Library/Preferences/org.keepassxc.keepassxc.plist
+
+bitwarden:
+  bundle_id: com.bitwarden.desktop
+  brew_cask: bitwarden
+  traces:
+    - ~/Library/Application Support/Bitwarden
+    - ~/Library/Preferences/com.bitwarden.desktop.plist
+
+amphetamine:
+  bundle_id: com.if.Amphetamine
+  traces:
+    - ~/Library/Application Support/Amphetamine
+    - ~/Library/Preferences/com.if.Amphetamine.plist
+
+macs-fan-control:
+  bundle_id: crystalidea.macs-fan-control
+  traces:
+    - ~/Library/Application Support/Macs Fan Control
+    - ~/Library/Preferences/crystalidea.macs-fan-control.plist
+
+daisydisk:
+  bundle_id: com.daisydiskapp.DaisyDisk
+  brew_cask: daisydisk
+  traces:
+    - ~/Library/Application Support/DaisyDisk
+    - ~/Library/Preferences/com.daisydiskapp.DaisyDisk.plist
+
+superduper:
+  bundle_id: com.shirt-pocket.SuperDuper
+  traces:
+    - ~/Library/Application Support/SuperDuper!
+    - ~/Library/Preferences/com.shirt-pocket.SuperDuper.plist
+
+carbon-copy-cloner:
+  bundle_id: com.bombich.ccc
+  traces:
+    - ~/Library/Application Support/com.bombich.ccc
+    - ~/Library/Preferences/com.bombich.ccc.plist
+
+timemachine:
+  bundle_id: com.apple.backupd
+  traces:
+    - ~/Library/Application Support/MobileSync
+
+paw:
+  bundle_id: com.luckymarmot.Paw
+  brew_cask: paw
+  traces:
+    - ~/Library/Application Support/com.luckymarmot.Paw
+    - ~/Library/Preferences/com.luckymarmot.Paw.plist
+
+insomnia:
+  bundle_id: com.insomnia.app
+  brew_cask: insomnia
+  traces:
+    - ~/Library/Application Support/Insomnia
+    - ~/Library/Preferences/com.insomnia.app.plist
+
+cyberduck:
+  bundle_id: ch.sudo.cyberduck
+  brew_cask: cyberduck
+  traces:
+    - ~/Library/Application Support/Cyberduck
+    - ~/Library/Preferences/ch.sudo.cyberduck.plist
+
+filezilla:
+  bundle_id: org.filezilla-project.filezilla
+  brew_cask: filezilla
+  traces:
+    - ~/.config/filezilla
+
+termius:
+  bundle_id: com.termius-dmg.mac
+  brew_cask: termius
+  traces:
+    - ~/Library/Application Support/Termius
+
+hyper:
+  bundle_id: co.zeit.hyper
+  brew_cask: hyper
+  traces:
+    - ~/Library/Application Support/Hyper
+    - ~/.hyper.js
+
+keka:
+  bundle_id: fr.julienforge.Keka
+  brew_cask: keka
+  traces:
+    - ~/Library/Application Support/Keka
+    - ~/Library/Preferences/fr.julienforge.Keka.plist
+
+the-unarchiver:
+  bundle_id: com.macpaw.site.theunarchiver
+  brew_cask: the-unarchiver
+  traces:
+    - ~/Library/Application Support/The Unarchiver
+    - ~/Library/Preferences/com.macpaw.site.theunarchiver.plist
+
+flux:
+  bundle_id: org.herf.Flux
+  traces:
+    - ~/Library/Preferences/org.herf.Flux.plist
+
+aerial:
+  bundle_id: com.JohnCoates.Aerial
+  traces:
+    - ~/Library/Application Support/Aerial
+    - ~/Library/Caches/Aerial
+
+screenium:
+  bundle_id: com.syniumsoftware.Screenium3
+  traces:
+    - ~/Library/Application Support/Screenium 3
+
+grammarly:
+  bundle_id: com.grammarly.ProjectLlama
+  brew_cask: grammarly-desktop
+  traces:
+    - ~/Library/Application Support/Grammarly
+    - ~/Library/Preferences/com.grammarly.ProjectLlama.plist
+    - ~/Library/Caches/com.grammarly.ProjectLlama.UpdateService
+    - ~/Library/Caches/com.grammarly.web-client
+    - ~/Library/Preferences/com.grammarly.ProjectLlama.UpdateService.plist
+
+evernote:
+  bundle_id: com.evernote.Evernote
+  brew_cask: evernote
+  traces:
+    - ~/Library/Application Support/com.evernote.Evernote
+    - ~/Library/Preferences/com.evernote.Evernote.plist
+
+todoist:
+  bundle_id: com.todoist.mac.Todoist
+  traces:
+    - ~/Library/Application Support/Todoist
+    - ~/Library/Preferences/com.todoist.mac.Todoist.plist
+
+things:
+  bundle_id: com.culturedcode.ThingsMac
+  traces:
+    - ~/Library/Application Support/Cultured Code/Things 3
+    - ~/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac
+
+omnifocus:
+  bundle_id: com.omnigroup.OmniFocus3
+  traces:
+    - ~/Library/Application Support/OmniFocus
+    - ~/Library/Preferences/com.omnigroup.OmniFocus3.plist
+
+fantastical:
+  bundle_id: com.flexibits.fantastical2.mac
+  traces:
+    - ~/Library/Application Support/Fantastical2
+    - ~/Library/Preferences/com.flexibits.fantastical2.mac.plist
+
+airbuddy:
+  bundle_id: it.krumelur.AirBuddy2
+  traces:
+    - ~/Library/Application Support/AirBuddy
+    - ~/Library/Preferences/it.krumelur.AirBuddy2.plist
+
+lungo:
+  bundle_id: at.caffeinated.lungo
+  traces:
+    - ~/Library/Preferences/at.caffeinated.lungo.plist
+
+mimestream-2:
+  bundle_id: com.mimestream.Mimestream
+  traces:
+    - ~/Library/Containers/com.mimestream.Mimestream
+
+nova:
+  bundle_id: com.panic.Nova
+  traces:
+    - ~/Library/Application Support/Nova
+    - ~/Library/Caches/com.panic.Nova
+    - ~/Library/Preferences/com.panic.Nova.plist
+
+bbedit:
+  bundle_id: com.barebones.bbedit
+  traces:
+    - ~/Library/Application Support/BBEdit
+    - ~/Library/Preferences/com.barebones.bbedit.plist
+
+textmate:
+  bundle_id: com.macromates.TextMate
+  brew_cask: textmate
+  traces:
+    - ~/Library/Application Support/TextMate
+    - ~/Library/Preferences/com.macromates.TextMate.plist
+
+sublime-text:
+  bundle_id: com.sublimetext.4
+  brew_cask: sublime-text
+  traces:
+    - ~/Library/Application Support/Sublime Text
+    - ~/Library/Preferences/com.sublimetext.4.plist
+
+android-studio:
+  bundle_id: com.google.android.studio
+  brew_cask: android-studio
+  traces:
+    - ~/Library/Application Support/Google/AndroidStudio*
+    - ~/Library/Caches/Google/AndroidStudio*
+    - ~/Library/Logs/Google/AndroidStudio*
+    - ~/.android
+    - ~/Library/Android
+
+eclipse:
+  bundle_id: org.eclipse.platform.ide
+  traces:
+    - ~/Library/Application Support/eclipse
+    - ~/.eclipse
+
+netbeans:
+  bundle_id: org.netbeans.ide
+  traces:
+    - ~/Library/Application Support/NetBeans
+    - ~/.netbeans
+
+mamp:
+  bundle_id: de.appsolute.MAMP
+  brew_cask: mamp
+  traces:
+    - ~/Library/Application Support/appsolute/MAMP PRO
+
+redis:
+  bundle_id: ""
+  brew_formula: redis
+  traces:
+    - /usr/local/var/db/redis
+    - /opt/homebrew/var/db/redis
+
+postgresql:
+  bundle_id: ""
+  brew_formula: postgresql
+  traces:
+    - /usr/local/var/postgresql*
+    - /opt/homebrew/var/postgresql*
+    - ~/Library/Application Support/Postgres
+
+mysql:
+  bundle_id: ""
+  brew_formula: mysql
+  traces:
+    - /usr/local/var/mysql
+    - /opt/homebrew/var/mysql
+
+elasticsearch:
+  bundle_id: ""
+  brew_formula: elasticsearch
+  traces:
+    - /usr/local/var/elasticsearch
+    - /opt/homebrew/var/elasticsearch
+    - ~/Library/Logs/elasticsearch*
+
+rabbitmq:
+  bundle_id: ""
+  brew_formula: rabbitmq
+  traces:
+    - /usr/local/var/lib/rabbitmq
+    - /opt/homebrew/var/lib/rabbitmq
+    - ~/Library/Logs/rabbitmq*
+
+kafka:
+  bundle_id: ""
+  brew_formula: kafka
+  traces:
+    - /usr/local/var/lib/kafka-logs
+    - /opt/homebrew/var/lib/kafka-logs
+
+jenkins:
+  bundle_id: ""
+  brew_formula: jenkins
+  traces:
+    - ~/Library/Logs/jenkins
+    - /usr/local/var/jenkins
+
+nginx:
+  bundle_id: ""
+  brew_formula: nginx
+  traces:
+    - /usr/local/var/log/nginx
+    - /opt/homebrew/var/log/nginx
+
+claude:
+  bundle_id: com.anthropic.claudefordesktop
+  brew_cask: claude
+  traces:
+    - ~/Library/Application Support/Claude
+    - ~/Library/Caches/com.anthropic.claudefordesktop
+    - ~/Library/Preferences/com.anthropic.claudefordesktop.plist
+    - ~/.claude
+
+chatgpt:
+  bundle_id: com.openai.chat
+  traces:
+    - ~/Library/Application Support/ChatGPT
+    - ~/Library/Caches/com.openai.chat
+    - ~/Library/Preferences/com.openai.chat.plist
+
+github-desktop:
+  bundle_id: com.github.GitHubClient
+  brew_cask: github
+  traces:
+    - ~/Library/Application Support/GitHub Desktop
+    - ~/Library/Caches/com.github.GitHubClient
+
+fork:
+  bundle_id: com.DanPristupov.Fork
+  brew_cask: fork
+  traces:
+    - ~/Library/Application Support/Fork
+    - ~/Library/Preferences/com.DanPristupov.Fork.plist
+
+linear:
+  bundle_id: com.linear
+  brew_cask: linear
+  traces:
+    - ~/Library/Application Support/Linear
+    - ~/Library/Preferences/com.linear.plist
+
+zed:
+  bundle_id: dev.zed.Zed
+  brew_cask: zed
+  traces:
+    - ~/Library/Application Support/Zed
+    - ~/Library/Logs/Zed
+    - ~/.config/zed
+
+heynote:
+  bundle_id: se.heynote.app
+  traces:
+    - ~/Library/Application Support/Heynote
+
+retcon:
+  bundle_id: co.retcon.retcon
+  traces:
+    - ~/Library/Application Support/Retcon
+
+dash:
+  bundle_id: com.kapeli.dashdoc
+  brew_cask: dash
+  traces:
+    - ~/Library/Application Support/Dash
+    - ~/Library/Preferences/com.kapeli.dashdoc.plist
+
+pockity:
+  bundle_id: com.krausefx.pockity
+  traces:
+    - ~/Library/Application Support/Pockity
+
+quitter:
+  bundle_id: com.marco.Quitter
+  traces:
+    - ~/Library/Preferences/com.marco.Quitter.plist
+
+contexts:
+  bundle_id: com.contextsformac.Contexts
+  traces:
+    - ~/Library/Application Support/Contexts
+    - ~/Library/Preferences/com.contextsformac.Contexts.plist
+
+proxifier:
+  bundle_id: com.Proxifier.Proxifier
+  traces:
+    - ~/Library/Application Support/Proxifier
+    - ~/Library/Preferences/com.Proxifier.Proxifier.plist
+
+popclip:
+  bundle_id: com.pilotmoon.popclip
+  traces:
+    - ~/Library/Application Support/PopClip
+    - ~/Library/Preferences/com.pilotmoon.popclip.plist
+
+karabiner-elements:
+  bundle_id: org.pqrs.Karabiner-Elements
+  brew_cask: karabiner-elements
+  traces:
+    - ~/.config/karabiner
+    - ~/Library/Preferences/org.pqrs.Karabiner-Elements.plist
+    - ~/Library/Application Support/Karabiner-Elements
+
+keyboard-maestro:
+  bundle_id: com.stairways.keyboardmaestro.engine
+  traces:
+    - ~/Library/Application Support/Keyboard Maestro
+    - ~/Library/Preferences/com.stairways.keyboardmaestro.engine.plist
+
+bettertouchtool:
+  bundle_id: com.hegenberg.BetterTouchTool
+  brew_cask: bettertouchtool
+  traces:
+    - ~/Library/Application Support/BetterTouchTool
+    - ~/Library/Preferences/com.hegenberg.BetterTouchTool.plist
+
+scrobbles:
+  bundle_id: com.last.fm.scrobbler
+  traces:
+    - ~/Library/Application Support/Last.fm Scrobbler
+    - ~/Library/Preferences/com.last.fm.scrobbler.plist
+
+downie:
+  bundle_id: com.charliemonroe.Downie
+  traces:
+    - ~/Library/Application Support/Downie
+    - ~/Library/Preferences/com.charliemonroe.Downie.plist
+
+permute:
+  bundle_id: com.charliemonroe.Permute-3
+  traces:
+    - ~/Library/Application Support/Permute 3
+    - ~/Library/Preferences/com.charliemonroe.Permute-3.plist
+
+imazing:
+  bundle_id: com.DigiDNA.iMazing2
+  brew_cask: imazing
+  traces:
+    - ~/Library/Application Support/iMazing
+    - ~/Library/Caches/com.DigiDNA.iMazing2
+
+appcleaner:
+  bundle_id: net.freemacsoft.AppCleaner
+  brew_cask: appcleaner
+  traces:
+    - ~/Library/Preferences/net.freemacsoft.AppCleaner.plist
+
+screenconnect:
+  bundle_id: com.screenconnect.client
+  traces:
+    - ~/Library/Application Support/ScreenConnect Client
+
+teamviewer:
+  bundle_id: com.teamviewer.TeamViewer
+  brew_cask: teamviewer
+  traces:
+    - ~/Library/Application Support/TeamViewer
+    - ~/Library/Logs/TeamViewer
+    - ~/Library/Preferences/com.teamviewer.TeamViewer.plist
+
+anydesk:
+  bundle_id: com.philandro.anydesk
+  brew_cask: anydesk
+  traces:
+    - ~/Library/Application Support/AnyDesk
+    - ~/Library/Preferences/com.philandro.anydesk.plist
+
+adobe-creative-cloud:
+  bundle_id: com.adobe.ccxprocess
+  traces:
+    - ~/Library/Application Support/Adobe
+    - ~/Library/Caches/Adobe
+    - ~/Library/Logs/Adobe
+    - ~/Library/Preferences/com.adobe.ccxprocess.plist
+    - ~/Library/Preferences/com.adobe.accmac.plist
+
+nvm:
+  bundle_id: ""
+  traces:
+    - ~/.nvm
+    - ~/.nvmrc
+
+oh-my-zsh:
+  bundle_id: ""
+  traces:
+    - ~/.oh-my-zsh
+    - ~/.zsh_history
+
+playwright:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/ms-playwright
+
+node-gyp:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/node-gyp
+
+typescript-cache:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/typescript
+
+pyenv:
+  bundle_id: ""
+  brew_formula: pyenv
+  traces:
+    - ~/.pyenv
+
+rbenv:
+  bundle_id: ""
+  brew_formula: rbenv
+  traces:
+    - ~/.rbenv
+
+rvm:
+  bundle_id: ""
+  traces:
+    - ~/.rvm
+
+asdf:
+  bundle_id: ""
+  brew_formula: asdf
+  traces:
+    - ~/.asdf
+    - ~/.tool-versions
+
+fnm:
+  bundle_id: ""
+  brew_formula: fnm
+  traces:
+    - ~/.fnm
+    - ~/Library/Caches/fnm_multishells
+
+volta:
+  bundle_id: ""
+  brew_formula: volta
+  traces:
+    - ~/.volta
+
+sdkman:
+  bundle_id: ""
+  traces:
+    - ~/.sdkman
+
+jabba:
+  bundle_id: ""
+  traces:
+    - ~/.jabba
+
+jenv:
+  bundle_id: ""
+  brew_formula: jenv
+  traces:
+    - ~/.jenv
+
+direnv:
+  bundle_id: ""
+  brew_formula: direnv
+  traces:
+    - ~/.config/direnv
+
+starship:
+  bundle_id: ""
+  brew_formula: starship
+  traces:
+    - ~/.config/starship.toml
+
+zoxide:
+  bundle_id: ""
+  brew_formula: zoxide
+  traces:
+    - ~/.local/share/zoxide
+
+fzf:
+  bundle_id: ""
+  brew_formula: fzf
+  traces:
+    - ~/.fzf
+    - ~/.fzf.zsh
+    - ~/.fzf.bash
+
+bat:
+  bundle_id: ""
+  brew_formula: bat
+  traces:
+    - ~/.config/bat
+
+ripgrep:
+  bundle_id: ""
+  brew_formula: ripgrep
+  traces:
+    - ~/.config/ripgrep
+
+tmux:
+  bundle_id: ""
+  brew_formula: tmux
+  traces:
+    - ~/.tmux
+    - ~/.tmux.conf
+
+vim:
+  bundle_id: ""
+  brew_formula: vim
+  traces:
+    - ~/.vim
+    - ~/.vimrc
+    - ~/.viminfo
+
+neovim:
+  bundle_id: ""
+  brew_formula: neovim
+  traces:
+    - ~/.config/nvim
+    - ~/.local/share/nvim
+    - ~/.cache/nvim
+
+emacs:
+  bundle_id: ""
+  brew_formula: emacs
+  traces:
+    - ~/.emacs
+    - ~/.emacs.d
+
+git:
+  bundle_id: ""
+  brew_formula: git
+  traces:
+    - ~/.gitconfig
+    - ~/.git-credentials
+    - ~/.config/git
+
+gh:
+  bundle_id: ""
+  brew_formula: gh
+  traces:
+    - ~/.config/gh
+
+terraform:
+  bundle_id: ""
+  brew_formula: terraform
+  traces:
+    - ~/.terraform.d
+    - ~/.terraform
+
+kubectl:
+  bundle_id: ""
+  brew_formula: kubernetes-cli
+  traces:
+    - ~/.kube
+    - ~/.config/kubectl
+
+helm:
+  bundle_id: ""
+  brew_formula: helm
+  traces:
+    - ~/.helm
+    - ~/.config/helm
+
+minikube:
+  bundle_id: ""
+  brew_formula: minikube
+  traces:
+    - ~/.minikube
+
+kind:
+  bundle_id: ""
+  brew_formula: kind
+  traces:
+    - ~/.kube/kind-config-*
+
+k9s:
+  bundle_id: ""
+  brew_formula: k9s
+  traces:
+    - ~/.config/k9s
+    - ~/.k9s
+
+ansible:
+  bundle_id: ""
+  brew_formula: ansible
+  traces:
+    - ~/.ansible
+
+packer:
+  bundle_id: ""
+  brew_formula: packer
+  traces:
+    - ~/.packer.d
+
+pulumi:
+  bundle_id: ""
+  brew_formula: pulumi
+  traces:
+    - ~/.pulumi
+
+serverless:
+  bundle_id: ""
+  traces:
+    - ~/.serverlessrc
+    - ~/.serverless
+
+sam-cli:
+  bundle_id: ""
+  brew_formula: aws-sam-cli
+  traces:
+    - ~/.aws-sam-cli
+
+firebase:
+  bundle_id: ""
+  traces:
+    - ~/.config/configstore/firebase-tools.json
+    - ~/.firebase
+
+netlify:
+  bundle_id: ""
+  traces:
+    - ~/.config/netlify
+
+vercel:
+  bundle_id: ""
+  traces:
+    - ~/.config/vercel
+    - ~/.local/share/com.vercel.cli
+
+azure-cli:
+  bundle_id: ""
+  brew_formula: azure-cli
+  traces:
+    - ~/.azure
+
+gcloud:
+  bundle_id: ""
+  brew_cask: google-cloud-sdk
+  traces:
+    - ~/.config/gcloud
+    - ~/.kube/gke_*
+
+
+google-chrome:
+  bundle_id: com.google.Chrome
+  brew_cask: google-chrome
+  traces:
+    - ~/Library/Application Support/Google/Chrome
+    - ~/Library/Caches/Google/Chrome
+    - ~/Library/Preferences/com.google.Chrome.plist
+    - ~/Library/LaunchAgents/com.google.keystone.agent.plist
+    - ~/Library/LaunchAgents/com.google.keystone.xpcservice.plist
+
+firefox:
+  bundle_id: org.mozilla.firefox
+  brew_cask: firefox
+  traces:
+    - ~/Library/Application Support/Firefox
+    - ~/Library/Caches/Firefox
+    - ~/Library/Preferences/org.mozilla.firefox.plist
+
+arc:
+  bundle_id: company.thebrowser.Browser
+  brew_cask: arc
+  traces:
+    - ~/Library/Application Support/Arc
+
+brave:
+  bundle_id: com.brave.Browser
+  brew_cask: brave-browser
+  traces:
+    - ~/Library/Application Support/BraveSoftware
+    - ~/Library/Caches/BraveSoftware
+
+microsoft-edge:
+  bundle_id: com.microsoft.edgemac
+  brew_cask: microsoft-edge
+  traces:
+    - ~/Library/Application Support/Microsoft Edge
+    - ~/Library/Caches/com.microsoft.edgemac
+
+opera:
+  bundle_id: com.operasoftware.Opera
+  brew_cask: opera
+  traces:
+    - ~/Library/Application Support/com.operasoftware.Opera
+    - ~/Library/Caches/com.operasoftware.Opera
+
+vivaldi:
+  bundle_id: com.vivaldi.Vivaldi
+  brew_cask: vivaldi
+  traces:
+    - ~/Library/Application Support/Vivaldi
+    - ~/Library/Caches/com.vivaldi.Vivaldi
+
+chromium:
+  bundle_id: org.chromium.Chromium
+  brew_cask: chromium
+  traces:
+    - ~/Library/Application Support/Chromium
+    - ~/Library/Caches/org.chromium.Chromium
+
+raycast:
+  bundle_id: com.raycast.macos
+  brew_cask: raycast
+  traces:
+    - ~/Library/Application Support/com.raycast.macos
+    - ~/Library/Preferences/com.raycast.macos.plist
+    - ~/Library/Containers/com.raycast.macos.RaycastAppIntents
+    - ~/Library/Group Containers/SY64MV22J9.com.raycast.macos.shared
+
+superhuman:
+  bundle_id: com.superhuman.web-client
+  traces:
+    - ~/Library/Application Support/Superhuman
+    - ~/Library/Caches/com.superhuman.web-client
+
+copilot:
+  bundle_id: ""
+  traces:
+    - ~/.copilot
+
+github-copilot:
+  bundle_id: ""
+  traces:
+    - ~/.config/github-copilot
+    - ~/Library/Application Support/GitHub Copilot
+
+agents:
+  bundle_id: ""
+  traces:
+    - ~/.agents
+
+sentry:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/io.sentry
+    - ~/Library/Caches/SentryCrash
+
+crashpad:
+  bundle_id: ""
+  traces:
+    - ~/Library/Caches/chrome_crashpad_handler
+
+next-js:
+  bundle_id: ""
+  traces:
+    - ~/Library/Preferences/create-next-app-nodejs
+    - ~/Library/Preferences/nextjs-nodejs
+
+qt:
+  bundle_id: ""
+  traces:
+    - ~/Library/Preferences/com.qtproject.plist
