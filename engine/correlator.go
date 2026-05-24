@@ -14,6 +14,7 @@ type DictionaryEntry struct {
 	BundleID    string   `yaml:"bundle_id"`
 	BrewFormula string   `yaml:"brew_formula"`
 	BrewCask    string   `yaml:"brew_cask"`
+	ActiveProbe string   `yaml:"active_probe"` // path that proves the tool is still live
 	Traces      []string `yaml:"traces"`
 }
 
@@ -86,8 +87,17 @@ func (c *Correlator) Correlate(raw RawTrace) Trace {
 	}
 
 	// Dictionary lookup
-	if owner := c.dictLookup(raw.Path); owner != "" {
-		// Check whether the owning app is actually installed
+	if owner, entry := c.dictLookupWithEntry(raw.Path); owner != "" {
+		// If the entry has an active_probe, check the path exists on disk
+		if entry.ActiveProbe != "" {
+			probe := expandHome(entry.ActiveProbe, c.home)
+			if _, err := os.Stat(probe); err == nil {
+				trace.Status = StatusOwned
+				trace.OwnerApp = owner
+				return trace
+			}
+		}
+		// Check whether the owning app is in the installed registry
 		if _, ok := c.byName[strings.ToLower(owner)]; ok {
 			trace.Status = StatusOwned
 			trace.OwnerApp = owner
@@ -156,7 +166,15 @@ func (c *Correlator) correlatePlist(trace Trace) Trace {
 	}
 
 	// Fall through to dictionary lookup (catches e.g. Keystone → Chrome)
-	if owner := c.dictLookup(trace.Path); owner != "" {
+	if owner, entry := c.dictLookupWithEntry(trace.Path); owner != "" {
+		if entry.ActiveProbe != "" {
+			probe := expandHome(entry.ActiveProbe, c.home)
+			if _, err := os.Stat(probe); err == nil {
+				trace.Status = StatusOwned
+				trace.OwnerApp = owner
+				return trace
+			}
+		}
 		if _, ok := c.byName[strings.ToLower(owner)]; ok {
 			trace.Status = StatusOwned
 			trace.OwnerApp = owner
@@ -172,18 +190,23 @@ func (c *Correlator) correlatePlist(trace Trace) Trace {
 }
 
 // dictLookup checks whether the path matches any trace pattern in the dictionary.
-// Returns the app key if matched, empty string otherwise.
 func (c *Correlator) dictLookup(path string) string {
+	owner, _ := c.dictLookupWithEntry(path)
+	return owner
+}
+
+// dictLookupWithEntry returns the app key and its DictionaryEntry if matched.
+func (c *Correlator) dictLookupWithEntry(path string) (string, DictionaryEntry) {
 	expanded := expandHome(path, c.home)
 	for appKey, entry := range c.dict {
 		for _, pattern := range entry.Traces {
 			patternExpanded := expandHome(pattern, c.home)
 			if matchPattern(expanded, patternExpanded) {
-				return appKey
+				return appKey, entry
 			}
 		}
 	}
-	return ""
+	return "", DictionaryEntry{}
 }
 
 func matchPattern(path, pattern string) bool {

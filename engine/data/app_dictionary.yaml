@@ -666,6 +666,7 @@ screenium:
 grammarly:
   bundle_id: com.grammarly.ProjectLlama
   brew_cask: grammarly-desktop
+  active_probe: /Applications/Grammarly Desktop.app
   traces:
     - ~/Library/Application Support/Grammarly
     - ~/Library/Preferences/com.grammarly.ProjectLlama.plist
@@ -1007,12 +1008,14 @@ adobe-creative-cloud:
 
 nvm:
   bundle_id: ""
+  active_probe: ~/.nvm/nvm.sh
   traces:
     - ~/.nvm
     - ~/.nvmrc
 
 oh-my-zsh:
   bundle_id: ""
+  active_probe: ~/.oh-my-zsh/oh-my-zsh.sh
   traces:
     - ~/.oh-my-zsh
     - ~/.zsh_history
@@ -1271,6 +1274,7 @@ gcloud:
 google-chrome:
   bundle_id: com.google.Chrome
   brew_cask: google-chrome
+  active_probe: /Applications/Google Chrome.app
   traces:
     - ~/Library/Application Support/Google/Chrome
     - ~/Library/Caches/Google/Chrome
@@ -1344,6 +1348,7 @@ superhuman:
 
 copilot:
   bundle_id: ""
+  active_probe: ~/.copilot/ide
   traces:
     - ~/.copilot
 
